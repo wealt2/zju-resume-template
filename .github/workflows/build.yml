@@ -1,3 +1,5 @@
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 name: Build Resume
 
 on:
@@ -12,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
