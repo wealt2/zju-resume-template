@@ -1,5 +1,5 @@
-\documentclass[11pt]{article}
-
+```latex
+\documentclass[10.5pt]{article}
 
 \setlength{\parindent}{0pt}
 \usepackage{xltxtra}
@@ -16,100 +16,71 @@
 \usepackage{fontspec}
 \usepackage{xeCJK}
 \usepackage{enumitem}
-\CJKsetecglue{} %% 取消中文与数字之间的间隙
+\CJKsetecglue{}
 
-
-%% 主文档字体设置
 \setmainfont[
     Path = fonts/Main/,
     Extension = .otf,
-    BoldFont = texgyretermes-bold.otf, % 加粗字体
-]{texgyretermes-regular.otf} % 正文字体
+    BoldFont = texgyretermes-bold.otf,
+]{texgyretermes-regular.otf}
 
-% 中文字体设置
 \setCJKmainfont[
     Path = fonts/hansans/,
     Extension = .ttf,
-    BoldFont = NotoSansSC-Bold.ttf, % 加粗字体
-]{NotoSansSC-Regular.otf} % 正文字体
-
+    BoldFont = NotoSansSC-Bold.ttf,
+]{NotoSansSC-Regular.otf}
 
 \usepackage{relsize}
 \usepackage{xspace}
+\usepackage{fontawesome}
 
-% 使用 fontawesome（部分图标）
-\usepackage{fontawesome} 
-
-% A4纸，上下左右边距
 \usepackage[
     a4paper,
-    left=1.2cm,
-    right=1.2cm,
-    top=1.5cm,
-    bottom=1cm,
+    left=1.15cm,
+    right=1.15cm,
+    top=1.15cm,
+    bottom=0.9cm,
     nohead
 ]{geometry}
 
-\renewcommand{\baselinestretch}{1.5} % 行间距设为1.5
+\renewcommand{\baselinestretch}{1.12}
 
 \usepackage{titlesec}
-\usepackage{enumitem}
-\setlist{noitemsep} % 取消列表项间的额外间距
-%\setlist{nosep} % 取消所有垂直间距
-\setlist[itemize]{topsep=0.25em, leftmargin=*}
-\setlist[enumerate]{topsep=0.25em, leftmargin=*}
+\setlist[itemize]{
+    topsep=0.15em,
+    itemsep=0.05em,
+    parsep=0em,
+    partopsep=0em,
+    leftmargin=1.3em
+}
 
-% --- 用于控制【不同项目之间】的垂直距离 ---
-\newlength{\interProjectSpacing}
-\setlength{\interProjectSpacing}{0.9em} % <--- 在此调整项目之间的距离
-\newcommand{\projectsep}{\vspace{\interProjectSpacing}}
+\titleformat{\section}
+{\large\bfseries\raggedright}
+{}{0em}
+{}
+[{\color{CVBlue}\titlerule}]
 
-% --- 用于控制【项目标题】与下方【项目描述】的距离 ---
-\newlength{\intraProjectTitleSep}
-\setlength{\intraProjectTitleSep}{0.4em} % <--- 在此调整标题和描述的距离
-\newcommand{\titlebreak}{\\[\intraProjectTitleSep]}
-
-% --- 用于控制【项目描述】与下方【要点列表】的距离 ---
-\newlength{\intraProjectListTopSep}
-\setlength{\intraProjectListTopSep}{0.2em} % <--- 在此调整描述和列表的距离
-
-% =======================================================================
-
-
-\titleformat{\section}         % 定制 \section 命令 
-{\large\bfseries\raggedright} % 将 section 标题设置为大号、粗体且左对齐
-{}{0em}                      % 可用于为所有 section 添加前缀（如“章节...”）
-{}                           % 可用于在标题前插入代码
-[{\color{CVBlue}\titlerule}]  % 在标题后插入一条横线
-\titlespacing*{\section}{0cm}{*1.6}{*1.2}
-
-
+\titlespacing*{\section}{0cm}{0.7em}{0.45em}
 
 \begin{document}
 \pagenumbering{gobble}
 
-%%%% 头像（保留可选）
+% 如仍然超出一页，可直接注释掉头像部分
 \begin{tikzpicture}[remember picture, overlay]
-\node[anchor=north east] at ($(current page.north east)+(-1.2cm,-1.0cm)$)
-{\includegraphics[height=2.8cm]{avatar.jpg}};
+\node[anchor=north east] at ($(current page.north east)+(-1.2cm,-0.85cm)$)
+{\includegraphics[height=2.3cm]{avatar.jpg}};
 \end{tikzpicture}
 
 \centerline{\LARGE\bfseries{蒋豪}}
+\vspace{0.08cm}
+\centerline{\normalsize \faEnvelopeO\ tinglanshen49@gmail.com}
 
-\vspace{0.2cm}
+\vspace{0.15cm}
 
-\centerline{
-\normalsize
-\faEnvelopeO\ tinglanshen49@gmail.com
-}
-
-\vspace{0.3cm}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\makebox[\widthof{\faUser}][c]{\color{CVBlue}\faUser}\ 个人简介}
 
-精通Python，熟练TensorFlow等开源神经网络框架。成功设计并部署以时间为数据输入驱动的预测回归模型，将时间分辨率从1 min提升至1 s。
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+精通 Python，熟悉 TensorFlow 等开源神经网络框架；具备科学计算、数据处理和回归预测经验。曾设计并部署以时间为输入的预测模型，将数据时间分辨率由 1 min 提升至 1 s。
+
 \section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ 教育经历}
 
 \textbf{中山大学} \hfill 2024.09 -- 2027.07\\
@@ -118,79 +89,37 @@
 \textbf{宁波工程学院} \hfill 2020.09 -- 2024.07\\
 材料成型及控制工程（学士）
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\makebox[\widthof{\faUsers}][c]{\color{CVBlue}\faUsers}\ 个人项目}
 
 \textbf{天琴卫星所受太阳风动压与太阳光压分析}
 
 \begin{itemize}
-    \item 利用机器学习方法预测天琴运行周期内各时间点对应位置的电子数密度。
-    
-    \item 基于神经网络构建高时间分辨率预测模型，将电子数密度时间分辨率由1 min提升至1 s。
-    
+    \item 利用机器学习方法预测天琴运行周期内各时间点对应位置的电子数密度、速度等空间环境参数。
+    \item 基于神经网络构建高时间分辨率预测模型，将电子数密度时间分辨率由 1 min 提升至 1 s。
     \item 建立无拖曳控制模式下的动力学模型，设计控制回路分析天琴卫星所受非保守力影响。
-    
 \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 专业技能}
 
-\textbf{编程语言}
-
 \begin{itemize}
-    \item 熟练掌握Python编程，具备科学计算与数据分析经验。
-    
-    \item 了解Java和C++基础知识，能够阅读和理解代码逻辑。
+    \item \textbf{编程语言：} 熟练掌握 Python，具备科学计算与数据分析经验；了解 Java 和 C++ 基础。
+    \item \textbf{机器学习：} 熟悉监督学习与非监督学习算法，包括 SVM、决策树、随机森林、K-Means 和 PCA；掌握模型选择、特征工程及超参数调优。
+    \item \textbf{深度学习：} 熟悉前馈神经网络、卷积神经网络和循环神经网络，了解 NLP 与 CV 的基本概念。
+    \item \textbf{数据处理与可视化：} 熟练使用 Pandas、NumPy、SciPy 进行数据处理，使用 Matplotlib 进行科学绘图。
 \end{itemize}
 
-\vspace{0.2cm}
-
-\textbf{机器学习与数据分析}
-
-\begin{itemize}
-    \item 熟悉监督学习与非监督学习算法，包括SVM、决策树、随机森林、K-Means、主成分分析（PCA）等。
-    
-    \item 掌握模型选择、特征工程及超参数调优方法。
-    
-    \item 具备回归预测、分类分析及时间序列建模经验。
-\end{itemize}
-
-\vspace{0.2cm}
-
-\textbf{深度学习}
-
-\begin{itemize}
-    \item 熟悉神经网络基础，包括前馈神经网络（FNN）、卷积神经网络（CNN）和循环神经网络（RNN）。
-    
-    \item 了解自然语言处理（NLP）和计算机视觉（CV）的基本概念。
-\end{itemize}
-
-\vspace{0.2cm}
-
-\textbf{数据处理与可视化}
-
-\begin{itemize}
-    \item 熟练使用Pandas、NumPy和SciPy进行数据清洗、预处理与分析。
-    
-    \item 熟练使用Matplotlib进行科学绘图与结果展示。
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\makebox[\widthof{\faBook}][c]{\color{CVBlue}\faBook}\ 科研成果}
 
-Li, C. F., Jiang, H., Su, W., et al.
-
-\textit{Methods and Results of the Study on Acceleration Noise due to Space Magnetic Field for Geocentric Orbit Gravitational Wave Detectors}
-
+Li, C. F., Jiang, H., Su, W., et al.  
+\textit{Methods and Results of the Study on Acceleration Noise due to Space Magnetic Field for Geocentric Orbit Gravitational Wave Detectors}.  
 Astronomical Techniques and Instruments (Submitted), 2026.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\makebox[\widthof{\faTrophy}][c]{\color{CVBlue}\faTrophy}\ 荣誉奖励}
 
 \begin{itemize}
     \item 硕士研究生一等奖学金 \hfill 2024 -- 2025
-    
     \item 硕士研究生三等奖学金 \hfill 2025 -- 2026
 \end{itemize}
 
 \end{document}
+```
