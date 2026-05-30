@@ -42,12 +42,12 @@
     nohead
 ]{geometry}
 
-\renewcommand{\baselinestretch}{1.25}
+\renewcommand{\baselinestretch}{1.28}
 
 \usepackage{titlesec}
 \setlist[itemize]{
-    topsep=0.25em,
-    itemsep=0.18em,
+    topsep=0.28em,
+    itemsep=0.2em,
     parsep=0em,
     partopsep=0em,
     leftmargin=1.3em
@@ -59,15 +59,15 @@
 {}
 [{\color{CVBlue}\titlerule}]
 
-\titlespacing*{\section}{0cm}{0.7em}{0.45em}
+\titlespacing*{\section}{0cm}{1em}{0.6em}
 
 \begin{document}
 \pagenumbering{gobble}
 
-% 如仍然超出一页，可直接注释掉头像部分
+% 头像
 \begin{tikzpicture}[remember picture, overlay]
 \node[anchor=north east] at ($(current page.north east)+(-1.2cm,-0.85cm)$)
-{\includegraphics[height=2.3cm]{d57a13e6ad3a5b90a918a927d6181ced.jpg}};
+{\includegraphics[height=2.5cm]{d57a13e6ad3a5b90a918a927d6181ced.jpg}};
 \end{tikzpicture}
 
 \centerline{\LARGE\bfseries{蒋豪}}
@@ -76,10 +76,12 @@
 
 \vspace{0.15cm}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\makebox[\widthof{\faUser}][c]{\color{CVBlue}\faUser}\ 个人简介}
 
 精通 Python，熟悉 TensorFlow 等开源神经网络框架；具备科学计算、数据处理和回归预测经验。曾设计并部署以时间为输入的预测模型，将数据时间分辨率由 1 min 提升至 1 s。
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ 教育经历}
 
 \textbf{中山大学} \hfill 2024.09 -- 2027.07\\
@@ -88,6 +90,7 @@
 \textbf{宁波工程学院} \hfill 2020.09 -- 2024.07\\
 材料成型及控制工程（学士）
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\makebox[\widthof{\faUsers}][c]{\color{CVBlue}\faUsers}\ 个人项目}
 
 \textbf{天琴卫星所受太阳风动压与太阳光压分析}
@@ -98,21 +101,23 @@
     \item 建立无拖曳控制模式下的动力学模型，设计控制回路分析天琴卫星所受非保守力影响。
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 专业技能}
 
-\begin{itemize}
-    \item \textbf{编程语言：} 熟练掌握 Python，具备科学计算与数据分析经验；了解 Java 和 C++ 基础。
-    \item \textbf{机器学习：} 熟悉监督学习与非监督学习算法，包括 SVM、决策树、随机森林、K-Means 和 PCA；掌握模型选择、特征工程及超参数调优。
-    \item \textbf{深度学习：} 熟悉前馈神经网络、卷积神经网络和循环神经网络，了解 NLP 与 CV 的基本概念。
-    \item \textbf{数据处理与可视化：} 熟练使用 Pandas、NumPy、SciPy 进行数据处理，使用 Matplotlib 进行科学绘图。
-\end{itemize}
+\noindent
+\textbf{编程语言：} 熟练掌握 Python，具备科学计算与数据分析经验；了解 Java 和 C++ 基础。\\[0.2em]
+\textbf{机器学习：} 熟悉监督学习与非监督学习算法，包括 SVM、决策树、随机森林、K-Means 和 PCA；掌握模型选择、特征工程及超参数调优。\\[0.2em]
+\textbf{深度学习：} 熟悉前馈神经网络、卷积神经网络和循环神经网络，了解 NLP 与 CV 的基本概念。\\[0.2em]
+\textbf{数据处理与可视化：} 熟练使用 Pandas、NumPy、SciPy 进行数据处理，使用 Matplotlib 进行科学绘图。
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\makebox[\widthof{\faBook}][c]{\color{CVBlue}\faBook}\ 科研成果}
 
 Li, C. F., Jiang, H., Su, W., et al.  
 \textit{Methods and Results of the Study on Acceleration Noise due to Space Magnetic Field for Geocentric Orbit Gravitational Wave Detectors}.  
 Astronomical Techniques and Instruments (Submitted), 2026.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\makebox[\widthof{\faTrophy}][c]{\color{CVBlue}\faTrophy}\ 荣誉奖励}
 
 \begin{itemize}
