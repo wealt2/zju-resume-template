@@ -59,9 +59,7 @@
 
 \titlespacing*{\section}{0cm}{0.72em}{0.38em}
 
-\newcommand{\cvsection}[2]{%
-    \section{\texorpdfstring{\makebox[\widthof{#1}][c]{\color{CVBlue}#1}\ #2}{#2}}%
-}
+\newcommand{\cvsection}[2]{\section{#2}}
 
 \newcommand{\datedentry}[3]{
     \textbf{#1} \hfill #2\\
@@ -98,3 +96,43 @@
 
 \vspace{0.08cm}
 \datedentry{宁波工程学院}{2020.09 -- 2024.07}{材料成型及控制工程（学士）}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{\faUsers}{项目经历}
+
+\textbf{天琴卫星所受太阳风动压与太阳光压分析} \hfill 科研项目
+\begin{itemize}
+    \item 面向天琴轨道周期内空间环境建模，利用机器学习预测不同时间点和位置对应的电子数密度、速度等参数，为动力学分析提供高分辨率输入。
+    \item 基于神经网络构建时间序列回归模型，完成数据清洗、特征组织、训练验证与误差分析，将电子数密度预测时间分辨率由 1 min 提升至 1 s。
+    \item 建立无拖曳控制模式下的动力学模型与控制回路，分析太阳风动压、太阳光压等非保守力对卫星加速度噪声的影响。
+\end{itemize}
+
+\textbf{AI Program} \hfill \href{https://github.com/wealt2/ai_program}{github.com/wealt2/ai\_program}
+\begin{itemize}
+    \item 将机器学习与 AI 编程实践整理为可公开展示的代码仓库，沉淀 Python 项目结构、模型实验流程、数据处理与结果输出等工程能力。
+    \item 围绕模型训练/推理、实验复现和代码可读性优化项目内容，便于后续扩展算法模块、记录实验配置并支撑求职作品展示。
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{\faCogs}{专业技能}
+
+\textbf{编程与工程：} 熟练掌握 Python，常用 NumPy、Pandas、SciPy、Matplotlib 进行科学计算、数据清洗、特征处理与可视化；了解 Java 和 C++ 基础，能够阅读并理解代码逻辑。\\
+\textbf{机器学习：} 熟悉监督学习与非监督学习，掌握 SVM、决策树、随机森林、K-Means、PCA 等方法，具备回归预测、聚类分析、模型评估与参数调优经验。\\
+\textbf{深度学习：} 熟悉 FNN、CNN、RNN 的构建与训练流程，掌握 TensorFlow、PyTorch 等框架，了解 NLP 与 CV 基本方法。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{\faBook}{科研成果}
+
+Li, C. F., Jiang, H., Su, W., et al.  
+\textit{Methods and Results of the Study on Acceleration Noise due to Space Magnetic Field for Geocentric Orbit Gravitational Wave Detectors}.  
+Astronomical Techniques and Instruments (Submitted), 2026.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{\faTrophy}{荣誉奖励}
+
+\begin{itemize}
+    \item 硕士研究生一等奖学金 \hfill 2024 -- 2025
+    \item 硕士研究生三等奖学金 \hfill 2025 -- 2026
+\end{itemize}
+
+\end{document}
