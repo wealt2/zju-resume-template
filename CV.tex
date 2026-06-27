@@ -35,22 +35,22 @@
 
 \usepackage[
     a4paper,
-    left=1.15cm,
-    right=1.15cm,
-    top=1.35cm,
-    bottom=1.05cm,
+    left=1.12cm,
+    right=1.12cm,
+    top=1.25cm,
+    bottom=0.95cm,
     nohead
 ]{geometry}
 
-\renewcommand{\baselinestretch}{1.28}
+\renewcommand{\baselinestretch}{1.17}
 
 \usepackage{titlesec}
 \setlist[itemize]{
-    topsep=0.28em,
-    itemsep=0.2em,
+    topsep=0.16em,
+    itemsep=0.12em,
     parsep=0em,
     partopsep=0em,
-    leftmargin=1.3em
+    leftmargin=1.25em
 }
 
 \titleformat{\section}
@@ -59,102 +59,42 @@
 {}
 [{\color{CVBlue}\titlerule}]
 
-\titlespacing*{\section}{0cm}{1em}{0.6em}
+\titlespacing*{\section}{0cm}{0.72em}{0.38em}
+
+\newcommand{\datedentry}[3]{
+    \textbf{#1} \hfill #2\\
+    #3
+}
 
 \begin{document}
 \pagenumbering{gobble}
 
 % 头像
 \begin{tikzpicture}[remember picture, overlay]
-\node[anchor=north east] at ($(current page.north east)+(-1.2cm,-0.85cm)$)
-{\includegraphics[height=2.5cm]{d57a13e6ad3a5b90a918a927d6181ced.jpg}};
+\node[anchor=north east] at ($(current page.north east)+(-1.2cm,-0.82cm)$)
+{\includegraphics[height=2.35cm]{d57a13e6ad3a5b90a918a927d6181ced.jpg}};
 \end{tikzpicture}
 
 \centerline{\LARGE\bfseries{蒋豪}}
-\vspace{0.08cm}
+\vspace{0.06cm}
 \centerline{\normalsize
 \faEnvelopeO\ tinglanshen49@gmail.com \quad
-\faPhone\ 15924302250}
+\faPhone\ 15924302250 \quad
+\faGithub\ \href{https://github.com/wealt2/ai_program}{github.com/wealt2/ai\_program}}
 
-\vspace{0.15cm}
+\vspace{0.08cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\makebox[\widthof{\faUser}][c]{\color{CVBlue}\faUser}\ 个人简介}
 
-精通 Python，熟悉 TensorFlow 等开源神经网络框架；具备科学计算、数据处理和回归预测经验。曾设计并部署以时间为输入的神经网络预测模型，将数据时间分辨率由 1 min 提升至 1 s。
+中山大学天文学硕士在读，具备 Python 科学计算、机器学习建模、数据处理与可视化经验。曾围绕天琴卫星空间环境参数预测与非保守力分析构建神经网络模型，将电子数密度时间分辨率由 1 min 提升至 1 s；重视模型实验、结果复现与代码工程化沉淀。
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ 教育经历}
 
-\textbf{中山大学} \hfill 2024.09 -- 2027.07\\
-天文学（硕士）
+\datedentry{中山大学}{2024.09 -- 2027.07}{天文学（硕士）}
 
-\textbf{宁波工程学院} \hfill 2020.09 -- 2024.07\\
-材料成型及控制工程（学士）
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\makebox[\widthof{\faUsers}][c]{\color{CVBlue}\faUsers}\ 个人项目}
-
-\textbf{天琴卫星所受太阳风动压与太阳光压分析}
-
-\begin{itemize}
-    \item 利用机器学习方法预测一个周期内天琴运行周期内各时间点对应位置的电子数密度、速度等空间环境参数。
-    \item 基于神经网络构建高时间分辨率预测模型，将电子数密度时间分辨率由 1 min 提升至 1 s。
-    \item 建立无拖曳控制模式下的动力学模型，设计控制回路分析天琴卫星所受非保守力影响。
-\end{itemize}
+\vspace{0.08cm}
+\datedentry{宁波工程学院}{2020.09 -- 2024.07}{材料成型及控制工程（学士）}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 专业技能}
-
-\textbf{编程语言}
-
-\begin{itemize}
-    \item 熟练掌握 Python 编程，具备科学计算与数据分析经验
-    \item 了解 Java 和 C++ 基础知识，能够阅读和理解代码逻辑
-\end{itemize}
-
-\vspace{0.15cm}
-
-\textbf{机器学习}
-
-\begin{itemize}
-    \item 熟悉监督学习与非监督学习算法
-    \item 熟悉 SVM、决策树、随机森林、K-Means 聚类算法、主成分分析（PCA）等方法
-\end{itemize}
-
-\vspace{0.15cm}
-
-\textbf{深度学习}
-
-\begin{itemize}
-    \item 熟悉神经网络基础，包括前馈神经网络（FNN）的构建与训练,卷积神经网络（CNN）与循环神经网络（RNN）
-    \item 掌握 TensorFlow 和 PyTorch 等深度学习框架
-    \item 了解自然语言处理（NLP）和计算机视觉（CV）基本方法
-\end{itemize}
-
-\vspace{0.15cm}
-
-\textbf{数据处理与可视化}
-
-\begin{itemize}
-    \item 熟练使用 Pandas、NumPy、SciPy 进行数据清洗与预处理
-    \item 熟练使用 Matplotlib 进行科学绘图与数据可视化
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\makebox[\widthof{\faBook}][c]{\color{CVBlue}\faBook}\ 科研成果}
-
-Li, C. F., Jiang, H., Su, W., et al.  
-\textit{Methods and Results of the Study on Acceleration Noise due to Space Magnetic Field for Geocentric Orbit Gravitational Wave Detectors}.  
-Astronomical Techniques and Instruments (Submitted), 2026.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\makebox[\widthof{\faTrophy}][c]{\color{CVBlue}\faTrophy}\ 荣誉奖励}
-
-\begin{itemize}
-    \item 硕士研究生一等奖学金 \hfill 2024 -- 2025
-    \item 硕士研究生三等奖学金 \hfill 2025 -- 2026
-\end{itemize}
-
-\end{document}
